@@ -14,8 +14,10 @@ Folders:
  • confusionMatrix/dataset - Contains the dataset which was used to test the accuracy of the model
 
 Steps to launch the application:
- 1. Navigate to the folder "dist/Hand_Detection_Interface"
- 2. Run the "Hand_Detection_Interface.exe" executable
+ 1. Install GIT LFS
+ 2. Execute the command "git lfc clone https://github.com/LeoDaDoe/Hand-Gesture-Recognition" in the repository where you'd store the project
+ 3. Navigate to the folder "dist/Hand_Detection_Interface"
+ 4. Run the "Hand_Detection_Interface.exe" executable
 
 Notes:
 The model sometimes has issues with lighting;

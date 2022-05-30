@@ -1,5 +1,6 @@
-models/*
-model-if-env/*
-__pycache__/*
-build/*
-protoc/*
+models/
+model-if-env/
+__pycache__/
+build/
+protoc/
+dist/

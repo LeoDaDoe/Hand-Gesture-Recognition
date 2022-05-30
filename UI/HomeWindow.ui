@@ -1,0 +1,501 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>339</width>
+    <height>490</height>
+   </rect>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>339</width>
+    <height>490</height>
+   </size>
+  </property>
+  <property name="maximumSize">
+   <size>
+    <width>339</width>
+    <height>490</height>
+   </size>
+  </property>
+  <property name="font">
+   <font>
+    <family>Nirmala UI Semilight</family>
+   </font>
+  </property>
+  <property name="windowTitle">
+   <string>Hand gesture link</string>
+  </property>
+  <property name="windowIcon">
+   <iconset>
+    <normaloff>../Resources/Icons/appIcon.png</normaloff>../Resources/Icons/appIcon.png</iconset>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QPushButton" name="Btn_OpenComm">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>399</y>
+      <width>121</width>
+      <height>23</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Nirmala UI Semilight</family>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton {
+	border: 1px solid black;
+	border-radius: 5px;
+	padding: 5px;
+	background-color: rgb(225, 225, 225);
+}
+
+QPushButton:hover {
+	background-color: rgb(214, 207, 213);
+}
+
+QPushButton:pressed {
+	border-style: inset;
+	background-color: rgb(116, 116, 116);
+}</string>
+    </property>
+    <property name="text">
+     <string>Open communication</string>
+    </property>
+   </widget>
+   <widget class="QComboBox" name="CBox_USBDevices">
+    <property name="geometry">
+     <rect>
+      <x>140</x>
+      <y>269</y>
+      <width>91</width>
+      <height>22</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Nirmala UI Semilight</family>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QComboBox {
+	border: 1px solid black;
+	border-radius: 2px;
+	padding: 5px;
+
+}
+
+</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>299</y>
+      <width>121</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Nirmala UI Semilight</family>
+      <pointsize>12</pointsize>
+      <underline>true</underline>
+     </font>
+    </property>
+    <property name="text">
+     <string>Device baud rate:</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_2">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>269</y>
+      <width>121</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Nirmala UI Semilight</family>
+      <pointsize>12</pointsize>
+      <underline>true</underline>
+     </font>
+    </property>
+    <property name="text">
+     <string>USB device port:</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="TextField_BaudRate">
+    <property name="geometry">
+     <rect>
+      <x>140</x>
+      <y>299</y>
+      <width>113</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QLineEdit {
+	border: 1px solid black;
+	border-radius: 2px;
+}
+
+</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="Btn_CloseComm">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>429</y>
+      <width>121</width>
+      <height>23</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Nirmala UI Semilight</family>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton {
+	border: 1px solid black;
+	border-radius: 5px;
+	padding: 5px;
+	background-color: rgb(225, 225, 225);
+}
+
+QPushButton:hover {
+	background-color: rgb(214, 207, 213);
+}
+
+QPushButton:pressed {
+	border-style: inset;
+	background-color: rgb(116, 116, 116);
+}</string>
+    </property>
+    <property name="text">
+     <string>Close communication</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="Btn_RefreshUSBDevices">
+    <property name="geometry">
+     <rect>
+      <x>240</x>
+      <y>269</y>
+      <width>20</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Nirmala UI Semilight</family>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton {
+	color: rgb(196, 198, 193);
+	border: 1px solid #555;
+	border-radius: 5px;
+	border-style: outset;
+	padding: 5px;
+}
+
+QPushButton:hover {
+	background-color: rgb(214, 207, 213);
+}
+
+QPushButton:pressed {
+	border-style: inset;
+	
+	background-color: rgb(116, 116, 116);
+}</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="icon">
+     <iconset>
+      <normaloff>../Resources/Icons/refresh.png</normaloff>../Resources/Icons/refresh.png</iconset>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="Btn_LoadModel">
+    <property name="geometry">
+     <rect>
+      <x>240</x>
+      <y>399</y>
+      <width>91</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Nirmala UI Semilight</family>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton {
+	border: 1px solid black;
+	border-radius: 5px;
+	padding: 5px;
+	background-color: rgb(225, 225, 225);
+}
+
+QPushButton:hover {
+	background-color: rgb(214, 207, 213);
+}
+
+QPushButton:pressed {
+	border-style: inset;
+	background-color: rgb(116, 116, 116);
+}</string>
+    </property>
+    <property name="text">
+     <string>Load model</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="Btn_StopDetection">
+    <property name="geometry">
+     <rect>
+      <x>140</x>
+      <y>429</y>
+      <width>91</width>
+      <height>23</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Nirmala UI Semilight</family>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton {
+	border: 1px solid black;
+	border-radius: 5px;
+	padding: 5px;
+	background-color: rgb(225, 225, 225);
+}
+
+QPushButton:hover {
+	background-color: rgb(214, 207, 213);
+}
+
+QPushButton:pressed {
+	border-style: inset;
+	background-color: rgb(116, 116, 116);
+}</string>
+    </property>
+    <property name="text">
+     <string>Stop detection</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="Label_Detection">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>0</y>
+      <width>321</width>
+      <height>241</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QLabel { border: 1px solid black; border-radius:5px}</string>
+    </property>
+    <property name="text">
+     <string>No image</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="Btn_StartDetection">
+    <property name="geometry">
+     <rect>
+      <x>140</x>
+      <y>399</y>
+      <width>91</width>
+      <height>23</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Nirmala UI Semilight</family>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton {
+	border: 1px solid black;
+	border-radius: 5px;
+	padding: 5px;
+	background-color: rgb(225, 225, 225);
+}
+
+QPushButton:hover {
+	background-color: rgb(214, 207, 213);
+}
+
+QPushButton:pressed {
+	border-style: inset;
+	background-color: rgb(116, 116, 116);
+}</string>
+    </property>
+    <property name="text">
+     <string>Start detection</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_3">
+    <property name="geometry">
+     <rect>
+      <x>30</x>
+      <y>359</y>
+      <width>101</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Nirmala UI Semilight</family>
+      <pointsize>12</pointsize>
+      <underline>true</underline>
+     </font>
+    </property>
+    <property name="text">
+     <string>Model state:</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+    </property>
+   </widget>
+   <widget class="QLabel" name="Label_ModelState">
+    <property name="geometry">
+     <rect>
+      <x>140</x>
+      <y>359</y>
+      <width>161</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Nirmala UI Semilight</family>
+      <pointsize>12</pointsize>
+      <underline>false</underline>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QLabel {
+	color : red;
+}</string>
+    </property>
+    <property name="text">
+     <string>Not Loaded</string>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="TextField_BoxNumber">
+    <property name="geometry">
+     <rect>
+      <x>140</x>
+      <y>329</y>
+      <width>113</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QLineEdit {
+	border: 1px solid black;
+	border-radius: 2px;
+}
+
+</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_4">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>329</y>
+      <width>121</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Nirmala UI Semilight</family>
+      <pointsize>12</pointsize>
+      <underline>true</underline>
+     </font>
+    </property>
+    <property name="text">
+     <string>Number of boxes:</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+    </property>
+   </widget>
+   <widget class="QLabel" name="Label_Spinner">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>464</y>
+      <width>16</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="scaledContents">
+     <bool>true</bool>
+    </property>
+   </widget>
+   <widget class="QLabel" name="Label_Status">
+    <property name="geometry">
+     <rect>
+      <x>30</x>
+      <y>460</y>
+      <width>301</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Nirmala UI Semilight</family>
+      <pointsize>10</pointsize>
+      <underline>true</underline>
+     </font>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>339</width>
+     <height>21</height>
+    </rect>
+   </property>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
